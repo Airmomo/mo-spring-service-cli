@@ -17,25 +17,6 @@
 - 整合Swagger3，自动生成API测试文档
 - 整合Spring Security，可配置CSRF-Token来防御CSRF攻击
 
-# 前后端分离
-
-在前后端分离的开发形式，本项目也很好地支持后端服务的独立开发，基于Alibaba提供的FastJSON依赖，让数据完全以JSON格式来与前端进行交互
-
-当你的项目以前后端分离的形式进行开发时，在使用本项目搭建后端服务时需要注意：
-- 页面和静态资源都以在前端部署的，可删除resources下的静态资源目录static和模版资源目录templates
-  - [static](./src/main/resources/static)
-  - [templates](./src/main/resources/templates)
-- 启用本项目提供的两个组件类来完善功能
-  - 全局异常响应类（返回数据为JSON格式）[GlobalExceptionHandler](./src/main/java/com/mospring/controller/handler/GlobalExceptionHandler.java)
-  - Spring Security认证请求控制类（返回数据为JSON格式）[JsonSecurityController](./src/main/java/com/mospring/controller/page/JsonSecurityController.java)
-- 这两个类主要是为了支持在前后端分离后，补充在异常响应和Security认证时，以JSON来交互数据
-- 删除或注释掉不需要的组件类
-  - 全局异常响应类（返回异常模版页面和异常信息）[GlobalExceptionPageHandler]((./src/main/java/com/mospring/controller/handler/GlobalExceptionPageHandler.java))
-  - 页面路由控制类（专门返回页面的Controller）[page目录](./src/main/java/com/mospring/controller/page)
-- 不注释掉注册组件的注释或者删除不需要的组件类的话，启动可以正常启动，但在响应请求时可能会产生预期外的结果
-
-你也可以选择克隆 branch server 来获取本项目支持前后端分离的版本
-
 # 搭建环境和推荐工具
 - 编码工具：IntelliJ IDEA
 - Spring version ： 2.7.1

@@ -6,6 +6,7 @@ import com.mospring.exception.ServiceException;
 import com.mospring.serializer.ExceptionResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,8 +19,8 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 拦截指定包下出现的异常
  */
-//@RestControllerAdvice(basePackages = {"com.mospring.controller",
-//                                      "com.mospring.service"})
+@RestControllerAdvice(basePackages = {"com.mospring.controller",
+                                      "com.mospring.service"})
 public class GlobalExceptionHandler {
 
     /**
