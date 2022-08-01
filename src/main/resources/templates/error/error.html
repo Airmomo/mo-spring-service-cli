@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一次错误的请求</title>
+</head>
+<body>
+    <p>
+        <label th:text="${error_status}"></label>
+    </p>
+    <p>
+        <label th:text="${error_msg}"></label>
+    </p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+server:
+  # 服务端口
+  port: 8080
+spring:
+  # 持久层数据源配置
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/mo_spring'
+    username: 'root'
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 缓存层数据源配置
+  redis:
+    # Redis服务器地址
+    host: localhost
+    # 端口
+    port: 6379
+    # 使用几号数据库
+    database: 0
+  # JPA 配置
+  jpa:
+    # 打印SQL语句
+    show-sql: true
+    # 数据库操作模式
+    hibernate:
+      ddl-auto: create
+    open-in-view: true
+  thymeleaf:
+    # 开发阶段，建议关闭thymeleaf的缓存
+    cache: false
+# Swagger开关
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+# 解决因为日志等级为DEBUG时，启动项目报"CONDITIONS EVALUATION REPORT"的问题
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: error
