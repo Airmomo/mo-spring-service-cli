@@ -34,7 +34,7 @@
   - 页面路由控制类（专门返回页面的Controller）[page目录](./src/main/java/com/mospring/controller/page)
 - 不注释掉注册组件的注释或者删除不需要的组件类的话，启动可以正常启动，但在响应请求时可能会产生预期外的结果
 
-你也可以选择克隆 branch server 来获取本项目支持前后端分离的版本
+你也可以选择克隆 [branch server](https://github.com/Airmomo/mospring/tree/server) 来获取本项目支持前后端分离的版本
 
 # 搭建环境和推荐工具
 - 编码工具：IntelliJ IDEA
