@@ -9,13 +9,10 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 import javax.sql.DataSource;
 
 /**
- * Spring MVC 配置类 —— 相当于Web.xml
  * 这里主要作用于注册其他框架提供的Bean类
- *
- * 若通过继承WebMvcConfigurationSupport这个类来实现配置，则会让spring boot的自动配置失效，所以这里不继承
  */
 @Configuration
-public class WebMvcConfiguration {
+public class BeanRegisterConfiguration {
 
     /**
      * 添加记住我功能用于存放Token记录的数据库仓库
