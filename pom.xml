@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-    <artifactId>mo-spring-service-cli</artifactId>
+    <artifactId>moSpring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>moSpring</name>
     <description>moSpring</description>
